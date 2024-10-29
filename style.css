@@ -1,0 +1,52 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.contenedor {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    padding: 20px;
+}.tarjeta {
+    width: 300px; 
+    margin: 10px; 
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px #000000; 
+}.tarjeta img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 5px 5px 0 0; 
+}.tarjeta h3 {
+    margin-top: 10px; 
+}
+
+.tarjeta p {
+    font-size: 0.9em; 
+    line-height: 1.5; 
+}
+@keyframes show{
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+img{
+  view-timeline-name: --image;
+  view-timeline-axis: block ;
+  
+  animation-timeline: --image;
+  animation-name: show;
+  
+  animation-range: entry: 25% cover 50%;
+  animation-fill: both;
+}
